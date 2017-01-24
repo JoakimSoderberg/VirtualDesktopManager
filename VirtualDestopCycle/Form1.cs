@@ -99,6 +99,7 @@ namespace VirtualDesktopManager
             }
         }
 
+        
         private void handleChangedNumber()
         {
             desktops = VirtualDesktop.GetDesktops();
@@ -469,6 +470,12 @@ namespace VirtualDesktopManager
             catch (Exception ex)
             {
             }
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            var f = new SplashForm();
+            f.Show();
         }
     }
 }
