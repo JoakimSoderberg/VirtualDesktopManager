@@ -128,6 +128,10 @@ namespace VirtualDesktopManager
 
             restoreApplicationFocus(currentDesktopIndex);
             changeTrayIcon(currentDesktopIndex);
+
+            // TODO: Make this show on proper screen.
+            var splash = new SplashForm((currentDesktopIndex + 1).ToString());
+            splash.Show();
         }
 
         private string PickNthFile(int currentDesktopIndex)
@@ -292,7 +296,8 @@ namespace VirtualDesktopManager
             if(desktop.GetRight() != null)
             {
                 desktop.GetRight()?.Switch();
-            } else
+            }
+            else
             {
                 desktops.First()?.Switch();
             }
